@@ -118,6 +118,11 @@ $dados = mysqli_fetch_assoc($rs);
                         <label class="sexlabel" for="sexo">Feminino</label>
                     </label>
 
+                    <label class="label-input" for="porte">
+                        <i class="fas fa-size icon-modify"></i>
+                        <input name="porte" required type="text" value="<?=$dados["porte"]?>" maxlength="50">
+                    </label>
+
                     <label class="label-input" for="vacina">
                         <i class="fas fa-syringe icon-modify"></i>
                         <input name="vacina" required type="text" value="<?=$dados["vacina"]?>" maxlength="200">

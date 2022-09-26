@@ -49,7 +49,8 @@
     $nome = mysqli_real_escape_string($conexao,$_POST["nome"]);
     $animal = mysqli_real_escape_string($conexao,$_POST["animal"]);
     $idade = mysqli_real_escape_string($conexao,$_POST["idade"]);
-    $sexo = mysqli_real_escape_string($conexao,$_POST["sexo"]);    
+    $sexo = mysqli_real_escape_string($conexao,$_POST["sexo"]); 
+    $porte = mysqli_real_escape_string($conexao,$_POST["porte"]);   
     $vacina = mysqli_real_escape_string($conexao,$_POST["vacina"]);    
     $obs = mysqli_real_escape_string($conexao,$_POST["obs"]);    
     $cor = mysqli_real_escape_string($conexao,$_POST["cor"]);    
@@ -61,6 +62,7 @@
     animal = '{$animal}',
     idade = '{$idade}',
     sexo = '{$sexo}',
+    porte = '{$porte}',
     vacina = '{$vacina}',
     obs = '{$obs}',
     cor = '{$cor}',

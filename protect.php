@@ -12,7 +12,6 @@ if(!isset($_SESSION)) {
         <meta name="keywords" content="adoção, adotar, cachorro, gato, animais,  ong, adotar animais">
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Happy Paw | Acesso Negado</title>
         <meta name="description" content="Happy Paw! Adote já o seu amiguinho e seja feliz!">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
@@ -31,7 +30,7 @@ if(!isset($_SESSION)) {
         <link rel="stylesheet" href="css/responsive.css">
 
         <style>
-            .container{
+            .contneg{
             text-align : center;
             margin-top: 200px;
         }
@@ -40,7 +39,7 @@ if(!isset($_SESSION)) {
 <body>
 <?php
 if(!isset($_SESSION['id'])) {
-    die('<div class="container"><h1>Você não pode acessar esta página porque não está logado.</h1><p><a class="btn" href="cadastrar.php">Voltar</a></p></div>');
+    die('<div class="contneg"><h1>Você não pode acessar esta página porque não está logado.</h1><p><a class="btn" href="cadastrar.php">Voltar</a></p></div>');
 }
 ?>
 </body>

@@ -97,7 +97,7 @@ include('conexao.php');
                 <?php
                     $txt_pesquisa = (isset($_POST["txt_pesquisa"]))?$_POST["txt_pesquisa"]:"";
 
-                    $sql = "SELECT * FROM Animais WHERE id='{txt_pesquisa}' or nome LIKE '%{$txt_pesquisa}%' or animal LIKE '{$txt_pesquisa}' or idade LIKE '{$txt_pesquisa}' or sexo LIKE '{$txt_pesquisa}' or vacina LIKE '{$txt_pesquisa}' or obs LIKE '{$txt_pesquisa}' or cor LIKE '{$txt_pesquisa}' or raca LIKE '{$txt_pesquisa}' or castracao LIKE '{$txt_pesquisa}'";
+                    $sql = "SELECT * FROM Animais WHERE nome LIKE '%{$txt_pesquisa}%' or animal LIKE '{$txt_pesquisa}' or idade LIKE '{$txt_pesquisa}' or sexo LIKE '{$txt_pesquisa}' or vacina LIKE '{$txt_pesquisa}' or obs LIKE '{$txt_pesquisa}' or cor LIKE '{$txt_pesquisa}' or raca LIKE '{$txt_pesquisa}' or castracao LIKE '{$txt_pesquisa}'";
                     $rs = mysqli_query($conexao,$sql) or die("Erro ao gerar a consulta no banco de dados" . mysqli_error($conexao)); 
 
                     while ($dados = mysqli_fetch_assoc($rs)){

@@ -1,8 +1,6 @@
 <?php
 include('global.php'); 
 
-//nome inicial para inserção da tabela
-$nomearq = md5(time());
 ?>
 <html>
 <head>
@@ -110,6 +108,11 @@ $nomearq = md5(time());
                         <label class="sexlabel" for="sexo">Masculino</label>
                         <input class="radio" name="sexo" value="fem" required type="radio">
                         <label class="sexlabel" for="sexo">Feminino</label>
+                    </label>
+
+                    <label class="label-input" for="porte">
+                        <i class="fas fa-size icon-modify"></i>
+                        <input name="porte" required type="text" placeholder="Porte" maxlength="50">
                     </label>
 
                     <label class="label-input" for="vacina">

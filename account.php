@@ -113,13 +113,17 @@ if(!isset($_SESSION)) {
     <!-- main-area -->
     <main>
 
+        <?php 
+            $name = $_SESSION['nomecadastro'];
+            $name = ucfirst($name)
+        ?> 
         <!-- breadcrumb-area -->
         <section class="breadcrumb-area breadcrumb-bg" data-background="img/bg/breadcrumb_bg.jpg">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <div class="breadcrumb-content">
-                            <h2 class="title">Seja bem-vindo, <?php echo $_SESSION['nomecadastro']; ?>.</h2>
+                            <h2 class="title">Seja bem-vindo, <?php echo $name;?>.</h2>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.php">Início</a></li>
