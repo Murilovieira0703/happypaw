@@ -119,7 +119,7 @@ $dados = mysqli_fetch_assoc($rs);
                     </label>
 
                     <label class="label-input" for="porte">
-                        <i class="fas fa-size icon-modify"></i>
+                        <i class="fas fa-weight icon-modify"></i>
                         <input name="porte" required type="text" value="<?=$dados["porte"]?>" maxlength="50">
                     </label>
 
@@ -153,7 +153,6 @@ $dados = mysqli_fetch_assoc($rs);
         </div><!-- second-content -->
         <div class ="foto">
             <?php
-                $nomefoto = $dados["foto"];
                 if($dados["foto"]=="" || !file_exists('./img/uploads/'. $dados["foto"])){
                     $nomefoto = "user.jpg";
                 }else{
@@ -169,14 +168,17 @@ $dados = mysqli_fetch_assoc($rs);
     </div>
     <div id="editar-foto">
             <form id="form-upload-foto" action="" method="post" enctype="mutipart/form-data">
-                <input type="hidden" name="idcontato" value="<?=$id?>">
+                <input type="hidden" name="id" value="<?=$id?>">
                 <label for="arquivo">Selecione um aquivo de imagem</label>
                 <div class="input-group">
                     <input class="form-control" type="file" name="arquivo" id="arquivo">
                     <input id="btn-enviar-foto" class="btn2"type="submit" value="Enviar">
                 </div>
             </form>
-        <div id="loader" class="progress">
+            <div id="mensagem" class="mb-3 alert alert-success">
+                    
+                </div>
+            <div id="loader" class="progress">
             <div id="barra" class="progress-bar bg-danger"
             role="progressbar"
             style="width: 0%"
@@ -191,12 +193,9 @@ $dados = mysqli_fetch_assoc($rs);
 </div>
 </div>
 
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/jquery.form.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/upload.js"></script>
-    <script src="jslog/app.js"></script>
-    <script src="js/checkform.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery.form.js"></script>
+    <script src="./js/upload.js"></script>
     <script src="https://kit.fontawesome.com/c358fe95a4.js" crossorigin="anonymous" defer></script>
 </body>
 </html>
